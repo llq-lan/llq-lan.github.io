@@ -73,6 +73,72 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-vue3tongxin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/27/vue3tongxin/" class="article-date">
+  <time class="dt-published" datetime="2024-02-27T12:00:22.000Z" itemprop="datePublished">2024-02-27</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/27/vue3tongxin/">vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2>父传子defineProps</h2>
+<h5>父组件 示例：</h5>
+<img src="../images/1.png" width=100% height=500 />
+<h5>子组件 示例：</h5>
+<img src="../images/2.png" width=100% height=500 />
+<h5>效果 示例：</h5>
+<img src="../images/3.png"  />
+
+<h2>子传父</h2>
+<h3>$emit
+说到$emit就要说一下自定义事件，在vue框架中事件分为两种:一种是原生的DOM事件，另外一种自定义事件。原生DOM事件可以让用户与网页进行交互，比如click、dbdlick、change、mouseenter、mouseleave.自定义事件可以实现子组件给父组件传递数据。vue2中的@click绑定的是自定义事件 ,可以通过.native修饰符变为原生DOM事件 。vue3中绑定的是原生事件,利用defineEmits方法返回函数触发自定义事件，不需要引入，直接使用。</h3>
+<h5>父组件示例：</h5>
+<img src="../images/4.png" width=100% height=500 />
+<h5>子组件 示例：</h5>
+<img src="../images/5.png" width=100% height=500 />
+<h5>效果 示例：</h5>
+<img src="../images/6.png"  />
+<h2>父直接获取子</h2>
+<h2>pinia</h2>
+<h3>1.第一步先安装:两者随便下载安装任意</h3>
+<h5>
+<p>1.yarn add pinia</p>
+<p>2.npm install pinia</p>
+</h5>
+<h3>2.新建store文件夹 分两块</h3>
+<img src="../images/8.png" width=100% height=500 />
+<h3>3.index.ts</h3>
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt4dn4hu0004as8yh5vk9uhw" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-sql" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/27/sql/" class="article-date">
@@ -106,7 +172,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt4a381h0000f08yf79t056l" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt4dn4hl0001as8y9wjucd9b" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -159,7 +225,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt4a381x0003f08ycf76fzvi" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt4dn4hg0000as8y5am60zas" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -214,6 +280,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/02/27/vue3tongxin/">vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)</a>
+          </li>
         
           <li>
             <a href="/2024/02/27/sql/">SQL的 CRUD (增、删、改、查)</a>

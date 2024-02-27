@@ -4,19 +4,27 @@
   <meta charset="utf-8">
   
   
-  <title>Hello World | 李兰清的技术博客</title>
+  <title>vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia) | 李兰清的技术博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="父传子defineProps 父组件 示例：  子组件 示例：  效果 示例：   子传父 $emit 说到$emit就要说一下自定义事件，在vue框架中事件分为两种:一种是原生的DOM事件，另外一种自定义事件。原生DOM事件可以让用户与网页进行交互，比如click、dbdlick、change、mouseenter、mouseleave.自定义事件可以实现子组件给父组件传递数据。vue2中的@c">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/03/03/hello-world/index.html">
+<meta property="og:title" content="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)">
+<meta property="og:url" content="http://example.com/2024/02/27/vue3tongxin/index.html">
 <meta property="og:site_name" content="李兰清的技术博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="父传子defineProps 父组件 示例：  子组件 示例：  效果 示例：   子传父 $emit 说到$emit就要说一下自定义事件，在vue框架中事件分为两种:一种是原生的DOM事件，另外一种自定义事件。原生DOM事件可以让用户与网页进行交互，比如click、dbdlick、change、mouseenter、mouseleave.自定义事件可以实现子组件给父组件传递数据。vue2中的@c">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-02T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-02-27T11:21:51.249Z">
+<meta property="og:image" content="http://example.com/2024/02/27/images/1.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/2.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/3.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/4.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/5.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/6.png">
+<meta property="og:image" content="http://example.com/2024/02/27/images/8.png">
+<meta property="article:published_time" content="2024-02-27T12:00:22.000Z">
+<meta property="article:modified_time" content="2024-02-27T13:00:36.081Z">
 <meta property="article:author" content="李兰清">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://example.com/2024/02/27/images/1.png">
   
     <link rel="alternate" href="/atom.xml" title="李兰清的技术博客" type="application/atom+xml">
   
@@ -75,10 +83,10 @@
 </header>
 
       <div class="outer">
-        <section id="main"><article id="post-hello-world" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+        <section id="main"><article id="post-vue3tongxin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
-    <a href="/2023/03/03/hello-world/" class="article-date">
-  <time class="dt-published" datetime="2023-03-02T16:00:00.000Z" itemprop="datePublished">2023-03-03</time>
+    <a href="/2024/02/27/vue3tongxin/" class="article-date">
+  <time class="dt-published" datetime="2024-02-27T12:00:22.000Z" itemprop="datePublished">2024-02-27</time>
 </a>
     
   </div>
@@ -89,7 +97,7 @@
         
   
     <h1 class="p-name article-title" itemprop="headline name">
-      Hello World
+      vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)
     </h1>
   
 
@@ -97,24 +105,39 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></span><br></pre></td></tr></table></figure>
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h2>父传子defineProps</h2>
+<h5>父组件 示例：</h5>
+<img src="../images/1.png" width=100% height=500 />
+<h5>子组件 示例：</h5>
+<img src="../images/2.png" width=100% height=500 />
+<h5>效果 示例：</h5>
+<img src="../images/3.png"  />
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<h2>子传父</h2>
+<h3>$emit
+说到$emit就要说一下自定义事件，在vue框架中事件分为两种:一种是原生的DOM事件，另外一种自定义事件。原生DOM事件可以让用户与网页进行交互，比如click、dbdlick、change、mouseenter、mouseleave.自定义事件可以实现子组件给父组件传递数据。vue2中的@click绑定的是自定义事件 ,可以通过.native修饰符变为原生DOM事件 。vue3中绑定的是原生事件,利用defineEmits方法返回函数触发自定义事件，不需要引入，直接使用。</h3>
+<h5>父组件示例：</h5>
+<img src="../images/4.png" width=100% height=500 />
+<h5>子组件 示例：</h5>
+<img src="../images/5.png" width=100% height=500 />
+<h5>效果 示例：</h5>
+<img src="../images/6.png"  />
+<h2>父直接获取子</h2>
+<h2>pinia</h2>
+<h3>1.第一步先安装:两者随便下载安装任意</h3>
+<h5>
+<p>1.yarn add pinia</p>
+<p>2.npm install pinia</p>
+</h5>
+<h3>2.新建store文件夹 分两块</h3>
+<img src="../images/8.png" width=100% height=500 />
+<h3>3.index.ts</h3>
 
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt4dn4hg0000as8y5am60zas" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt4dn4hu0004as8yh5vk9uhw" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -124,15 +147,11 @@
     
 <nav id="article-nav">
   
-    <a href="/2024/02/27/sql/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">前一篇</strong>
-      <div class="article-nav-title">
-        
-          SQL的 CRUD (增、删、改、查)
-        
-      </div>
-    </a>
   
+    <a href="/2024/02/27/sql/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">后一篇</strong>
+      <div class="article-nav-title">SQL的 CRUD (增、删、改、查)</div>
+    </a>
   
 </nav>
 
