@@ -73,6 +73,68 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-fangjie" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/02/28/fangjie/" class="article-date">
+  <time class="dt-published" datetime="2024-02-28T11:39:58.000Z" itemprop="datePublished">2024-02-28</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/02/28/fangjie/">防抖和节流，概念、怎么实现</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h1>一、防抖（debounce）</h1>
+<h3>防抖：就是当一个事件处于高频繁点击的情况下，会禁止点击，直到频率低到规定的程度也就是说禁止的时间过了才可以进行点击
+</h3>
+<h3>效果：在有效短时间内可以进行点击，直到在停止点击后的某一个指定的时间执行一次函数</h3>
+<h1>2、防抖实现</h1>
+<h3>思路：</h3>
+<h4>1.点击事件时，给一个seTimeout定时器来延迟点击</h4>
+<h4>2.每次点击清楚并重置定时器</h4>
+<h4>3.使用闭包来存储定时器</h4>
+<h3>代码效果展示：</h3>
+<h3>防抖：</h3>
+<img src="../images/11.png"  />
+
+
+<h1>二、节流（throttle）</h1>
+<h3>1.什么是节流？：</h3>
+<h4>节流通俗来说就是一个事件不停的点击，控制它在每个时间段只触发一次</h4>
+<h4>效果：短时间内多次点击，即使点击仍在继续也可以根据指定时间点击一次函数一次函数--至少执行一次--</h4>
+<h3>2.节流实现：</h3>
+<h3>思路：</h3>
+<h4>1.设置一个变量，限制为true才能进入函数，进入后变为false</h4>
+<h4>2.设置setTimeout定时器在规定时间后才能进入执行函数再次点击</h4>
+<h4>3.使用闭包存储变量</h4>
+<h3>代码效果展示：</h3>
+<img src="../images/12.png"  />
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/02/28/fangjie/" data-id="clt5rmss20000do8yhnnqczhi" data-title="防抖和节流，概念、怎么实现" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-vue3tongxin" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/27/vue3tongxin/" class="article-date">
@@ -131,7 +193,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt5o1yhn0000dw8y7l3k2yj1" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt5rmssa0002do8y6tdhffap" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -176,7 +238,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt5o1yht0001dw8ybu3r61o6" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt5rmssb0003do8ye8xzgn7z" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -229,7 +291,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt5o1yhv0002dw8y53um1nvn" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt5rmss80001do8ygxa27l4o" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -284,6 +346,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/02/28/fangjie/">防抖和节流，概念、怎么实现</a>
+          </li>
         
           <li>
             <a href="/2024/02/27/vue3tongxin/">vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)</a>
