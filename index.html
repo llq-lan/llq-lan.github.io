@@ -73,6 +73,52 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-chong" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2024/03/01/chong/" class="article-date">
+  <time class="dt-published" datetime="2024-03-01T00:35:22.000Z" itemprop="datePublished">2024-03-01</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="p-name article-title" href="/2024/03/01/chong/">什么是重排？如何减少重排？</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h3 id=""><a href="#" class="headerlink" title=""></a></h3><h1>一、什么是重排？如何减少重排？</h1>
+<h3>重排（reflow）：当一个元素的位置、尺寸等发生改变的时候，浏览器需要重新计算该元素的几何属性并且摆放到正确的位置的过程叫做重排。一般像页面初次渲染、带有动画的元素、添加或删除功能、图片放大缩小、浏览器窗口发生改变的时候都会触发重排。重排也叫回流。</h3>
+<h1>二、一些常用的避免方法：</h1>
+<h3>1.使用类名批量修改样式：将要进行样式更改的元素添加/删除CSS类，而不是直接操作样式属性，可以将多个更改合并到一次重排和重绘中。</h3>
+<h3>2.使用文档片段：如果需要频繁地向页面中添加大量DOM节点，可以先将他们添加到文档片段中，最后再统一插入文档中，这样可以减少回流的次数。</h3>
+<h3>3.避免频繁查询布局信息：在JavaScript中避免频繁查询布局信息，如‘offsetWidth'和’offsetHeight</h3>
+<h3>4.使用CSS Grid和Flex布局：使用Grid和Flex布局可以减少对元素位置的频繁调整，从而减少重排</h3>
+<h3>5.使用CSS动画和过渡：在需要实现动画效果时，使用CSS动画和过渡，而不是JavaScript来操作元素样式。</h3>
+<h3>6.使用GPU加速提升网站的动画渲染性能：transform:translateZ(0);或transform：translate3d(0,0,0)</h3>
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2024/03/01/chong/" data-id="clt7xhakm0000as8ygm230i5p" data-title="什么是重排？如何减少重排？" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+
+  
     <article id="post-fangjie" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
   <div class="article-meta">
     <a href="/2024/02/28/fangjie/" class="article-date">
@@ -120,10 +166,11 @@
 <h4>3.使用闭包存储变量</h4>
 <h3>代码效果展示：</h3>
 <img src="../images/12.png"  />
+
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/28/fangjie/" data-id="clt5rp9lu0000dw8y22me8e8r" data-title="防抖和节流，概念、怎么实现" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/28/fangjie/" data-id="clt7xhaks0001as8y0hthgqet" data-title="防抖和节流，概念、怎么实现" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -193,7 +240,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt5rp9m20003dw8y4xus4j28" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/vue3tongxin/" data-id="clt7xhakv0003as8y8b0v3fnz" data-title="vue3组件常用的通信方式(父传子、子传父、父直接获取子、pinia)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -238,7 +285,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt5rp9m10002dw8y821r0ia0" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2024/02/27/sql/" data-id="clt7xhakw0004as8ybobda00i" data-title="SQL的 CRUD (增、删、改、查)" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -291,7 +338,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt5rp9lz0001dw8yd93r4x53" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
+      <a data-url="http://example.com/2023/03/03/hello-world/" data-id="clt7xhaku0002as8ydy9eelkn" data-title="Hello World" class="article-share-link"><span class="fa fa-share">分享</span></a>
       
       
       
@@ -335,7 +382,7 @@
   <div class="widget-wrap">
     <h3 class="widget-title">归档</h3>
     <div class="widget">
-      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/03/">三月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2024/02/">二月 2024</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2023/03/">三月 2023</a></li></ul>
     </div>
   </div>
 
@@ -346,6 +393,10 @@
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2024/03/01/chong/">什么是重排？如何减少重排？</a>
+          </li>
         
           <li>
             <a href="/2024/02/28/fangjie/">防抖和节流，概念、怎么实现</a>
